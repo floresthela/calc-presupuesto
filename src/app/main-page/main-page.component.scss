@@ -1,0 +1,58 @@
+@import '../../main-styles.scss';
+
+.top-bar {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(75deg, rgb(214,180,247), rgb(173,203,231));
+
+    // centrar texto
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 18px;
+        font-family: 'Lato';
+        letter-spacing: 1px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $dark;
+    }
+}
+
+.total-pres {
+    display: flex;
+    height: 250px;
+    background: $dark;
+
+    // centrar texto
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-family: 'Lato';
+        font-weight: 300;
+        font-size: 58px;
+        color: white;
+
+        &.green { // &.clase
+            color: lighten($green, 12%);
+        }
+
+        &.red {
+            color: lighten($red, 12%);
+        }
+    }
+}
+
+.add-item-sec {
+    display: flex;
+    
+    // centrar texto
+    justify-content: center;
+    align-items: center;
+
+    .add-item-container {
+        width: 680px;
+    }
+}
