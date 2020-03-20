@@ -5,14 +5,35 @@
     width: 100%;
     position: relative;
 
+    &:hover {
+        .x-icon-button {
+            opacity: 1;
+            transform: scale(1);
+
+        }
+    }
+    
     .x-icon-button {
         position: absolute;
         height: 34px;
         width: 34px;
         background: $dark;
+        background-image: url('../../../assets/delete.svg');
+        background-repeat: no-repeat;
+        background-position: center;
         border-radius: 50%;
         right: -17px; // mitad de width
         top: -17px; // mitad del height
+
+        transition: opacity 0.2s ease-out, transform 0.2s ease-in;
+
+        transform: scale(0);
+        opacity: 0;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 }
 
@@ -23,6 +44,11 @@
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+        background-color: darken($light-grey,2%);
+    }
 
     .description {
         display: flex;
@@ -38,6 +64,8 @@
         padding: 5px;
         border-radius: 3px;
     }
+
+    
 
 
 }
