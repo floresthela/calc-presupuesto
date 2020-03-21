@@ -10,11 +10,21 @@ import { BudgetItem } from 'src/shared/models/budget-item.model';
 })
 export class AddItemFormComponent implements OnInit {
 
-  @Input() item : BudgetItem = new BudgetItem('', null);
+  @Input() item : BudgetItem;
   @Output() formSubmit : EventEmitter<BudgetItem> = new EventEmitter<BudgetItem>();
+  
+  isNewItem: boolean;
+  
   constructor() { }
 
   ngOnInit(): void {
+    if(this.item){
+      // se pasó un item ya existente
+      this.isNewItem = false;
+    } else {
+      this.isNewItem = true;
+      this.item = new BudgetItem('', null);
+    }
   }
 
   onSubmit(form: NgForm){

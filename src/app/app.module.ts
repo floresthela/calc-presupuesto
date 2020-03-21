@@ -10,6 +10,9 @@ import { BudgetItemListComponent } from './budget-item-list/budget-item-list.com
 import { BudgetItemCardComponent } from './budget-item-list/budget-item-card/budget-item-card.component';
 import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,9 +25,12 @@ import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
+  entryComponents: [EditItemModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
